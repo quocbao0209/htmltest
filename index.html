@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="with=device-with, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Dashboard</h1>
+            <img src="./image/user.png" width="50px" height="50px">
+        </div>
+        <div class="content">
+            <div class="content-box">
+                <div class="content-title">
+                    <h3>File Record Processed</h3>
+                    <div class="more">
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="content-title">
+                    <h3>Clients</h3>
+                    <div class="more">
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="content-title">
+                    <h3>Date Record</h3>
+                    <div class="more">
+                        <span>24</span>
+                    </div>
+                </div>
+                <div class="content-title">
+                    <h3>Sources</h3>
+                    <div class="more">
+                        <span>4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="data-table">
+                <div class="data-table-wrapper">
+                    <div class="data-table-item-list">
+                        <h2 class="title">CsVs</h2>
+                        <a href="#" class="view-more">
+                            <span>View More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="data-table-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Name</th>
+                                    <th>Code</th>
+                                    <th>Link</th>
+                                    <th>Date Time</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="no-bg">
+                                    <td>1</td>
+                                    <td>Tirana - Times - Economy - 11133355.csv</td>
+                                    <td>TRN</td>
+                                    <td>
+                                        <a href="#">Local - Tirana - Times - Economy - 11133355.csv
+                                    </a>
+                                    </td>
+                                    <td>03.01.22 12:20:22</td>
+                                    <td class="action">...</td>
+                                </tr>
+                                <tr class="no-bg">
+                                    <td>2</td>
+                                    <td>Tirana - Times - Economy - 1113333.csv</td>
+                                    <td>TRN</td>
+                                    <td><a href="#" title="#">Local - Tirana - Times - Economy - 1113333.csv</a></td>
+                                    <td>03.01.22 12:04:37</td>
+                                    <td class="action">...</td>
+                                </tr>
+                                <tr class="no-bg">
+                                    <td>3</td>
+                                    <td>Tirana - Times - Economy - 111.csv</td>
+                                    <td>TRN</td>
+                                    <td>
+                                        <a href="#">Local2</a>
+                                    </td>
+                                    <td>02.28.22 11:47:28</td>
+                                    <td class="action">...</td>
+                                </tr>
+                                <tr class="no-bg">
+                                    <td>4</td>
+                                    <td>Tirana - Times - Economy - 1646108000578.csv</td>
+                                    <td>TRN</td>
+                                    <td><a href="#" title="#">Local</a></td>
+                                    <td>02.28.22 11:47:28</td>
+                                    <td class="action">...</td>
+                                </tr>
+                                <tr class="no-bg">
+                                    <td>5</td>
+                                    <td>hehe</td>
+                                    <td>code1100</td>
+                                    <td><a href="#" title="#">http://s3.us-east.scv</a></td>
+                                    <td>02.23.22 05:5:36</td>
+                                    <td class="action">...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <div class="sidebar-btn">
+                    <i class="fa-regular fa-circle-left"></i>
+                </div>
+                <div class="logo-content">
+                    <div class="logo">
+                        <img src="./image/logo-removebg-preview.png" width="50px" height="50px">
+                        <div class="logo-name" id="hide-logo">
+                            <h5><span>Media</span></h5>
+                            <h5>Monitoring</h5>
+                            <h5>Sytem</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-click">
+                    <div class="item">
+                        <a href="index2.html" class="menu-btn">
+                            <i class="fa-solid fa-rectangle-list"></i><span> Dashboard</span>
+                        </a>
+                    </div>
+                    <div class="item" id="managerecord">
+                        <a href="#" class="menu-btn" onclick="show_hide()">
+                            <i class="fa-solid fa-rectangle-list"></i><span> Manage Record<i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu" id="sub-menu">
+                            <a href="#"><i class="fa-solid fa-rectangle-list"></i><span> Manage Record</span></a>
+                            <a href="#"><i class="fa-solid fa-rectangle-list"></i><span> Manage Record</span></a>
+                        </div>
+                    </div>
+                    <div class="item" id="managesource">
+                        <a href="#" class="menu-btn" onclick="hide_menu()">
+                            <i class="fa-solid fa-rectangle-list"></i><span> Manage Sources<i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu" id="hide-menu">
+                            <a href="#"><i class="fa-solid fa-rectangle-list"></i><span> Manage Sources</span></a>
+                            <a href="#"><i class="fa-solid fa-rectangle-list"></i><span> Manage Sources</span></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="index2.html" class="menu-btn">
+                            <i class="fa-solid fa-circle-user"></i><span> Users</span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="index2.html" class="menu-btn">
+                            <i class="fa-solid fa-users"></i><span> Client</span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="index2.html" class="menu-btn">
+                            <i class="fa-solid fa-sliders"></i><span> Filters</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".sidebar-btn").click(function() {
+                $(".wrapper").toggleClass("collapse");
+            });
+            $(".item a").click(function() {
+                $(this).siblings('div').slideToggle('slow');
+            })
+        });
+
+        // function show_hide() {
+        //     var click = document.getElementById("sub-menu")
+        //     if (click.style.display === "none") {
+        //         click.style.display = "block";
+        //     } else {
+        //         click.style.display = "none";
+        //     }
+        // }
+
+        // function hide_menu() {
+        //     var click = document.getElementById("hide-menu")
+        //     if (click.style.display === "none") {
+        //         click.style.display = "block";
+        //     } else {
+        //         click.style.display = "none";
+        //     }
+        // }
+    </script>
+
+
+</body>
+
+</html>
